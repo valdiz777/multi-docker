@@ -22,16 +22,16 @@ after_success:
   - docker push valdiz777/multi-server
   - docker push valdiz777/multi-worker
 
-# deploy:
-#   provider: elasticbeanstalk
-#   region: us-east-2
-#   app: docker-reactapp
-#   env: DockerReactapp-env
-#   bucket_name: elasticbeanstalk-us-east-2-406033701411
-#   bucket_path: docker-reactapp
-#   on:
-#     branch: master
-#   access_key_id: $AWS_ACCESS_KEY
-#   secret_access_key: $AWS_SECRET_KEY
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-us-east-2-406033701411
+  bucket_path: multi-docker
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
 
 
